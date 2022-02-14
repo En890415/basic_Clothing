@@ -1,0 +1,57 @@
+<?php
+    
+?>
+<div class="topnav">
+    <!--
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    -->
+        <!-- Collapsed Sidebar -->
+            <div class="topleft">
+              <button  id="sidebarcontrol" class="openbtn">☰</button>
+                
+            <script>
+            var test=1;
+            
+                document.getElementById("sidebarcontrol").onclick = function(){
+                    test++;
+                    if (test%2==0) {
+                        openNav();
+                    } else {
+                        closeNav();
+                    }
+                };
+    //        $("#sidebarcontrol").click(function() {
+    //        test++;
+    //            if (test%2==0) {
+    //                openNav();
+    //            } else {
+    //                closeNav();
+    //            }
+    //            })
+            </script> 
+          <img src="img/GU.png" width=50px align="left">
+              <a  href="main.php">首頁</a>
+              <div class="dropdown">
+                <a class="dropbtn">商品分類</a>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="product.php">鞋子/配件</a>
+                </div>
+              </div> 
+              <a href="#news">最新消息</a>
+              <a href="#contact">關於我們</a>
+              
+          
+          <div class="topright">
+              <a href="login.php">💂</button></a>
+    
+              <a href="#">🛒</a>
+              <a href='personal.php'>
+                  <?php 
+                echo $_SESSION['account_name'];
+                ?>
+                </a>
+          </div>
